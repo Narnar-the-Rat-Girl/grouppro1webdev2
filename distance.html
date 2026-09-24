@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distance Converter</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="./main.js" defer></script>
 </head>
 <body>
     <main>
@@ -16,10 +17,13 @@
                 <label for="miles-input" class="block text-sm font-medium text-slate-700 mt-5 mb-2">
                     Miles
                 </label>
-                <div class="field-wrapper">
-                    <input id="miles-input" type="number" value="0" class="w-full rounded-lg border-slate-300 px-4 py-2 text-slate-900 focus:border-emerald-500 focus:outline-none"/>
-                    <a href="">Add</a>
+                <div class="fields-wrapper">
+                    <div class="field-row">
+                        <input id="miles-input" type="number" value="0" class="w-full rounded-lg border-slate-300 px-4 py-2 text-slate-900 focus:border-emerald-500 focus:outline-none"/>
+                    </div>
                 </div>
+                <button type="button" id="add-field-button">Add</button>
+
                 <button id="miles-button" class="w-full mt-4 rounded-lg bg-emerald-600 px-4 py-2 font-semibold text-white hover:bg-emerald-700 transition cursor-pointer">
                     Convert
                 </button>
