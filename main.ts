@@ -7,7 +7,7 @@ const milesButton = document.getElementById("miles-button") as HTMLButtonElement
 const milesResult = document.getElementById("miles-result") as HTMLParagraphElement;
 
 const handleMilesConvert = (): void => {
-    const miles: number = Number(milesInput.value);
+    const miles: string = Number(milesInput.value);
     const kilometres: number = milesToKilometres(miles);
     milesResult.textContent = kilometres.toFixed(2);
 };
