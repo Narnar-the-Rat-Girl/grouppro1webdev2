@@ -42,25 +42,26 @@
       <label for="kg-input" class="block mb-2">kilograms</label>
       <input
             id="kg-input"
-            type="number"
+            type="string"
             value="0"
             class="rounded-lg border px-4 py-2 text-slate-900-500"
           />
       </div>
       </div>
       <div class = "flex items-center justify-between">
+                  <button
+            id="kg-button"
+            class=" mt-1 rounded-lg bg-red-600 px-2 py-2.5 font-semibold text-red-300 hover:bg-red-700 cursor-pointer"
+          >
+            convert to kg
+          </button>
         <button
             id="pounds-button"
             class=" mt-1 rounded-lg bg-red-600 px-2 py-2.5 font-semibold text-red-300 hover:bg-red-700 cursor-pointer"
           >
             convert to pounds
           </button>
-          <button
-            id="kg-button"
-            class=" mt-1 rounded-lg bg-red-600 px-2 py-2.5 font-semibold text-red-300 hover:bg-red-700 cursor-pointer"
-          >
-            convert to kg
-          </button>
+
       </div>
        <p
               id="weight-result"
