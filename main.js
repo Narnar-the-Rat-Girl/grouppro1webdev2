@@ -1,8 +1,10 @@
+/* Weight section */
 const poundsInput = document.getElementById('pounds-input');
 const kgInput = document.getElementById('kg-input');
 const poundsButton = document.getElementById('pounds-button');
 const kgButton = document.getElementById('kg-button');
-const weightResult = document.getElementById('weight-result');
+const kgResult = document.getElementById('kg-result');
+const lbResult = document.getElementById('lb-result');
 
 
 const kilogramsToPounds = (kilograms) => kilograms * 2.20462;
@@ -16,17 +18,19 @@ const KgConvert = () => {
 
         
     }    
-    weightResult.textContent = text;
+    lbResult.textContent = text;
 };
 poundsButton.addEventListener("click", KgConvert);
 
 const poundsToKilograms = (pounds) => pounds / 2.20462;
 const PoundsConvert = () => {
-
-
-    
-    const pounds = Number(poundsInput.value);
-    const kilograms = poundsToKilograms(pounds);
-    weightResult.textContent = kilograms.toFixed(2) + " kg";
+    let text = "";
+    const pounds = poundsInput.value.split(',');
+    for (p of pounds) {
+        p = Number(p);
+        const kilograms = poundsToKilograms(p);
+        text += kilograms.toFixed(2) + "kgs, ";
+    }
+    kgResult.textContent = text;
 };
 kgButton.addEventListener("click", PoundsConvert);
