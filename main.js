@@ -34,3 +34,5 @@ const PoundsConvert = () => {
     kgResult.textContent = text;
 };
 kgButton.addEventListener("click", PoundsConvert);
+
+/* Distance section */
