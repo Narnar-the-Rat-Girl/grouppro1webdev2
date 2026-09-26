@@ -1,4 +1,4 @@
-/* Distance section */
+//Distance Conversion
 const miInput = document.getElementById('mi-input');
 const kmInput = document.getElementById('km-input');
 const miButton = document.getElementById('mi-button');
